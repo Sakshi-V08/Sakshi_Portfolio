@@ -292,21 +292,7 @@ nav {
     height: 1000px;
     object-fit: contain;
 }
-.internship-list {
-    display: flex;
-    gap: 16px; /* optional spacing between boxes */
-    padding: 20px;
-}
 
-.internship-box {
-    border: 1px solid #ccc;
-    padding: 16px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    width: 200px;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
 
 
 @keyframes imgFloat {

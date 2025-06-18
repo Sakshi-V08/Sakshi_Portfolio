@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        :root {
+            --body-color: rgb(250, 250, 250);
+            --color-white: rgb(255, 255, 255);
+
+            --text-color-second: rgb(68, 68, 68);
+            --text-color-third: rgb(30, 159, 171);
+
+            --first-color: rgb(110, 87, 224);
+            --first-color-hover: rgb(40, 91, 212);
+
+            --second-color: rgb(110, 87, 224);
+            --third-color: rgb(192, 166, 49);
+            --first-shadow-color: rgba(0, 0, 0, 0.1);
+
+        }
+
+        /* ----- BASE ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--body-color);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            height: 90px;
+            line-height: 90px;
+            background: #f2f0f0;
+            padding-inline: 9vw;
+            transition: .3s;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            position: relative;
+        }
+
+        .nav-name {
+            font-size: 30px;
+            font-weight: 600;
+            color: var(--text-color-third);
+        }
+
+        .nav-logo span {
+            position: absolute;
+            top: -15px;
+            right: -20px;
+            font-size: 5em;
+            color: var(--text-color-second);
+        }
+
+        .nav-menu,
+        .nav_menu_list {
+            display: flex;
+        }
+
+        .nav-menu .nav_list {
+            list-style: none;
+            position: relative;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color-second);
+            font-weight: 500;
+            padding-inline: 15px;
+            margin-inline: 20px;
+        }
+
+        .Projects h1 {
+            width: 100%;
+            text-align: center;
+            font-size: 35px;
+            padding-top: 30px;
+        }
+
+        .main {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 30px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 7px;
+            margin: 20px;
+            padding: 20px;
+            width: calc(33.33% - 20px);
+            box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h5 {
+            font-size: 1.5rem;
+            margin: 6px;
+        }
+
+        p {
+            font-size: 1rem;
+            text-align: justify;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        .btn {
+            font-weight: 500;
+            font-size: medium;
+            padding: 12px 20px;
+            background: #efefef;
+            border: none;
+            border-radius: 10px;
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .btn:hover {
+            background: var(--second-color);
+            color: var(--color-white);
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            row-gap: 30px;
+            background: #edecec;
+            padding-block: 20px 30px;
+        }
+
+        .top-footer p {
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .bottom-footer {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px);
+                align-items: center;
+            }
+
+            .nav-name {
+                padding: 0;
+                font-size: 30px;
+                font-weight: 600;
+                color: var(--text-color-third);
+            }
+
+
+        }
+
+        @media (max-width: 576px) {
+            .main {
+                margin: 2px auto;
+                padding: 20px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .card {
+                width: 90%;
+                justify-content: center;
+            }
+
+            .Projects h1 {
+                width: 100%;
+                text-align: center;
+                font-size: 30px;
+                padding-top: 25px;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Sakshi Verma</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="index.html" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="Projects">
+            <h1>Projects</h1>
+        </div>
+        <div class="main">
+
+            <div class="card" style="width: 30rem;">
+                <a href="INTERN_CERT_2023073_2-1.png" class="btn" target="_blank">Satish Dhawan Space Centre<i
+                        class="uil uil-file-alt"></i></a>
+
+            </div>
+        </div>
+        <div class="card" style="width: 30rem;">
+            <a href="Alorb.jpg" class="btn" target="_blank">Alorb Technologies Private Limites<i
+                    class="uil uil-file-alt"></i></a>
+        </div>
+    </div>
+    </div>
+    <footer>
+        <div class="bottom-footer">
+            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Sakshi Verma</a> - All rights
+                reserved
+            </p>
+        </div>
+    </footer>
+    </div>
+
+</body>
+
+</html>
