@@ -292,6 +292,9 @@ nav {
     height: 1000px;
     object-fit: contain;
 }
+.internship-list{
+    display: flex;
+}
 
 @keyframes imgFloat {
     50% {
