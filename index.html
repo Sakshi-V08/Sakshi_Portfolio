@@ -1,298 +1,569 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- UNICONS -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!-- CSS -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- Add favicon -->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
-
-    <title>Portfolio | Sakshi Verma</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi Verma | Data Analyst & Aspiring Data Scientist</title>
+  <meta name="description" content="Premium portfolio of Sakshi Verma, a data analyst and aspiring data scientist focused on analytics, machine learning, and business intelligence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+  <link rel="stylesheet" href="./style.css" />
 </head>
-
 <body>
-    <div class="container">
-        <!-- --------------- HEADER --------------- -->
-        <nav id="header">
-            <div class="nav-logo">
-                <p class="nav-name">Sakshi Verma</p>
-                <span>.</span>
+  <canvas id="networkCanvas"></canvas>
+  <div class="bg-glow glow-1"></div>
+  <div class="bg-glow glow-2"></div>
+
+  <header class="site-header">
+    <a href="#home" class="brand">
+      <span class="brand-mark">SV</span>
+      <span class="brand-text">Sakshi Verma</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="resume.pdf" class="nav-cta" download>Download Resume</a>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">Data Analyst | Aspiring Data Scientist | Business Analytics Enthusiast</div>
+        <h1>Hi, I'm <span>Sakshi Verma</span></h1>
+        <p class="hero-copy">
+          I’m currently working as an Analyst at Deloitte, where I help optimize business processes, analyze operational workflows, and build data-driven business solutions. I’m passionate about transforming raw data into clear insights using analytics, visualization, and machine learning.
+        </p>
+        <div class="hero-actions">
+          <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
+          <a href="#projects" class="btn btn-secondary">View Projects</a>
+          <a href="https://www.linkedin.com/in/sakshi-verma-27589a248/" class="btn btn-outline" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/" class="btn btn-outline" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+        <div class="hero-badges">
+          <span>Python</span>
+          <span>SQL</span>
+          <span>Power BI</span>
+          <span>Machine Learning</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-shell">
+          <div class="dashboard-top">
+            <div>
+              <p class="mini-label">Analytics Workspace</p>
+              <h3>Business Intelligence Pulse</h3>
             </div>
-            <div class="nav-menu" id="myNavMenu">
-                <ul class="nav_menu_list">
-                    <li class="nav_list">
-                        <a href="#home" class="nav-link active-link">Home</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#about" class="nav-link">About</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#projects" class="nav-link">Projects</a>
-                        <div class="circle"></div>
-                    </li>
-                    <li class="nav_list">
-                        <a href="#contact" class="nav-link">Contact</a>
-                        <div class="circle"></div>
-                    </li>
+            <div class="status-pill"><span class="dot"></span> Live</div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="glass-card chart-card chart-card-large">
+              <div class="card-head">
+                <p>Revenue Trend</p>
+                <span>+18.2%</span>
+              </div>
+              <svg viewBox="0 0 240 120" class="svg-chart line-chart" aria-label="Line chart">
+                <path class="grid-line" d="M20 100 H220" />
+                <path class="grid-line" d="M20 70 H220" />
+                <path class="grid-line" d="M20 40 H220" />
+                <path class="line" d="M20 90 C50 78, 70 66, 95 70 S140 84, 165 64 S210 45, 220 35" />
+                <circle cx="95" cy="70" r="4" />
+                <circle cx="165" cy="64" r="4" />
+                <circle cx="220" cy="35" r="4" />
+              </svg>
+            </div>
+
+            <div class="glass-card chart-card">
+              <div class="card-head">
+                <p>Customer Mix</p>
+                <span>Q2</span>
+              </div>
+              <div class="pie-wrap">
+                <div class="pie-chart"></div>
+                <ul class="legend">
+                  <li><span class="legend-dot blue"></span>Enterprise</li>
+                  <li><span class="legend-dot cyan"></span>SMB</li>
+                  <li><span class="legend-dot purple"></span>Retail</li>
                 </ul>
+              </div>
             </div>
 
-            <div class="nav-menu-btn">
-                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            <div class="glass-card chart-card">
+              <div class="card-head">
+                <p>Region Activity</p>
+                <span>Weekly</span>
+              </div>
+              <svg viewBox="0 0 240 120" class="svg-chart bar-chart" aria-label="Bar chart">
+                <rect x="30" y="70" width="24" height="40" />
+                <rect x="85" y="50" width="24" height="60" />
+                <rect x="140" y="35" width="24" height="75" />
+                <rect x="195" y="20" width="24" height="90" />
+              </svg>
             </div>
-        </nav>
 
-
-        <!-- -------------- MAIN ---------------- -->
-        <main class="wrapper">
-            <!-- -------------- FEATURED BOX ---------------- -->
-            <section class="featured-box" id="home">
-                <div class="featured-text">
-                    <div class="featured-text-card">
-                        <span>Sakshi Verma</span>
-                    </div>
-                    <div class="featured-name">
-                        <p>I'm <span class="typedText"></span></p>
-                    </div>
-                    <div class="featured-text-info">
-                        <p><span>Pursuing B.Tech at</span><br>
-                            National Institute Of Technology Sikkim</p>
-                    </div>
-
-                    <div class="social_icons">
-                        <div class="icon"><a href="https://www.instagram.com/sakshiverma9755/"><i
-                                    class="uil uil-instagram"></i></a></div>
-                        <div class="icon"><a href="https://www.linkedin.com/in/sakshi-verma-27589a248/"><i
-                                    class="uil uil-linkedin-alt"></i></a></div>
-                        <div class="icon"><a href="https://twitter.com/SakshiV03439541"><i
-                                    class="uil uil-twitter"></i></a></div>
-                        <div class="icon"><a href="https://github.com/"><i class="uil uil-github-alt"></i></a></div>
-                    </div>
-                </div>
-                <div class="featured-image">
-                    <div class="image">
-                        <img src="./profilepic.png" alt="avatar">
-                    </div>
-                </div>
-
-            </section>
-            <!-- -------------- ABOUT BOX ---------------- -->
-            <section class="section" id="about">
-                <div class="top-header">
-                    <h1>About Me</h1>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="about-info">
-                            <h3>My introduction</h3>
-                            <p>I am a 2025 pass-out student from the National Institute of Technology Sikkim, pursuing a
-                                degree in Mechanical Engineering. Throughout my academic journey, I have been part of a
-                                rigorous and intellectually stimulating environment that has helped me build a strong
-                                foundation in mathematics and programming.
-
-                                I am always eager to learn and explore new opportunities to enhance my knowledge and
-                                skills. My interests lie particularly in programming and machine learning. I have
-                                hands-on experience with C and Java, along with a working knowledge of web development.
-
-                                Beyond academics, I actively engage in creative activities that interest me. One such
-                                area is media design. I enjoy creating presentations, drafting case studies, and
-                                designing social media posts for the clubs I am involved in.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Web Developement</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>Bootstrap</span>
-                                <span>JavaScript</span>
-                                <span>ReactJS</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Softwares and Tools</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>Git</span>
-                                <span>Github </span>
-                                <span>Autodesk AUTOCAD</span>
-                                <span>MATLAB & Simulink</span>
-                                <span>SOLIDWORKS</span>
-                                <span>ANSYS Workbench</span>
-                                <span>Figma</span>
-                            </div>
-                        </div>
-                        <div class="skills-box">
-                            <div class="skills-header">
-                                <h3>Skills</h3>
-                            </div>
-                            <div class="skills-list">
-                                <span>MySQL</span>
-                                <span>PostgreSQL</span>
-                                <span>MongoDB</span>
-                                <span>C/C++</span>
-                                <span>JAVA</span>
-                                <span>Problem Solving</span>
-                                <span>Data Structure and Alogrithms</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- -------------- PROJECT BOX ---------------- -->
-
-            <section class="section" id="projects">
-                <div class="top-header">
-                    <h1>Experience</h1>
-                </div>
-                <div class="project-container">
-                    <div class="project-box">
-                        <i class="uil uil-briefcase-alt"></i>
-                        <h3>Projects</h3>
-                        <a href="Projects.html" class="btn" target="blank">Click here<i
-                                class="uil uil-file-alt"></i></a>
-
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-users-alt"></i>
-                        <h3>Certificate</h3>
-                        <a href="Certificate.html" class="btn" target="blank">Click here<i
-                                class="uil uil-file-alt"></i></a>
-                    </div>
-                    <div class="project-box">
-                        <i class="uil uil-award"></i>
-                        <h3>Internships</h3>
-                        <a href="Internship.html" class="btn" target="blank">Click here<i
-                                class="uil uil-file-alt"></i></a>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- -------------- CONTACT BOX ---------------- -->
-
-            <section class="section" id="contact">
-                <div class="top-header">
-                    <h1>Get in touch</h1>
-                    <span>Do you have a project in your mind, contact me here</span>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="contact-info">
-                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"></i> Email: sakshivermavns@gmail.com /
-                                b210142@nitsikkim.ac.in</p>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-control">
-                            <form name="submit-to-google-sheet">
-                                <div class="form-inputs">
-                                    <input type="text" class="input-field" name="Name" placeholder="Your Name" required>
-                                    <input type="email" class="input-field" name="Email" placeholder="Your Email"
-                                        required>
-                                </div>
-                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                                <div class="form-button">
-                                    <button class="btn">Submit <i class="uil uil-message"></i></button>
-                                </div>
-                            </form>
-                            <span id="msg">
-
-                            </span>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-
-        <!-- --------------- FOOTER --------------- -->
-        <footer>
-            <div class="top-footer">
-                <p>Sakshi Verma .</p>
+            <div class="glass-card chart-card">
+              <div class="card-head">
+                <p>Insight Stack</p>
+                <span>Tools</span>
+              </div>
+              <div class="icon-grid">
+                <div class="icon-pill"><i class="uil uil-database"></i></div>
+                <div class="icon-pill"><i class="uil uil-brackets-curly"></i></div>
+                <div class="icon-pill"><i class="uil uil-chart"></i></div>
+                <div class="icon-pill"><i class="uil uil-chart-line"></i></div>
+                <div class="icon-pill"><i class="uil uil-robot"></i></div>
+                <div class="icon-pill"><i class="uil uil-cloud-data-connection"></i></div>
+              </div>
             </div>
-            <div class="middle-footer">
-                <ul class="footer-menu">
-                    <li class="footer_menu_list">
-                        <a href="#home">Home</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#projects">Projects</a>
-                    </li>
-                    <li class="footer_menu_list">
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-social-icons">
-                <div class="icon"><a href="https://www.instagram.com/sakshiverma9755/"><i
-                            class="uil uil-instagram"></i></a></div>
-                <div class="icon"><a href="https://www.linkedin.com/in/sakshi-verma-27589a248/"><i
-                            class="uil uil-linkedin-alt"></i></a></div>
-                <div class="icon"><a href="https://twitter.com/SakshiV03439541"><i class="uil uil-twitter"></i></a>
-                </div>
-                <div class="icon"><a href="https://github.com/"><i class="uil uil-github-alt"></i></a></div>
-            </div>
-            <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Sakshi Verma</a> - All rights
-                    reserved
-                </p>
-            </div>
-        </footer>
+          </div>
 
+          <div class="floating-card card-a">SQL • Python • BI</div>
+          <div class="floating-card card-b">ML Models</div>
+          <div class="floating-card card-c">Dashboarding</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">About Me</p>
+        <h2>Turning Data into Decisions</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass-card about-card">
+          <p>
+            I’m currently working as an Analyst at Deloitte where I contribute to business process improvement, operational excellence, and data-informed decision-making.
+          </p>
+          <p>
+            Beyond my professional work, I’m deeply passionate about Data Analytics, Data Science, Artificial Intelligence, Machine Learning, and Business Intelligence. I enjoy solving complex problems with data, creating dashboards, identifying patterns, and helping organizations make smarter decisions.
+          </p>
+          <p>
+            My goal is to grow into a Data Scientist/Data Analyst role where I can combine analytical thinking with technical expertise to solve real-world business challenges.
+          </p>
+        </div>
+        <div class="glass-card timeline-card">
+          <h3>Professional Timeline</h3>
+          <ul class="timeline">
+            <li><strong>2025</strong><span>Graduated from NIT Sikkim with Mechanical Engineering</span></li>
+            <li><strong>Current</strong><span>Joined Deloitte as Analyst</span></li>
+            <li><strong>Learning</strong><span>Building strong foundations in Data Analytics</span></li>
+            <li><strong>Exploring</strong><span>Deepening knowledge in Machine Learning</span></li>
+            <li><strong>Building</strong><span>Creating AI and analytics projects</span></li>
+            <li><strong>Future</strong><span>Becoming a Data Scientist</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading">
+        <p class="eyebrow">Experience</p>
+        <h2>Current and Previous Experience</h2>
+      </div>
+      <div class="experience-card glass-card reveal">
+        <div class="company-badge">D</div>
+        <div class="experience-content">
+          <div class="experience-header">
+            <div>
+              <p class="mini-label">Current Company</p>
+              <h3>Deloitte</h3>
+            </div>
+            <div class="role-pill">Analyst</div>
+          </div>
+          <p>
+            I contribute to business process analysis, workflow optimization, reporting, and cross-functional problem solving. My work focuses on creating impactful business solutions through structured thinking, data interpretation, and stakeholder communication.
+          </p>
+          <ul class="bullet-list">
+            <li>Analyze operational workflows</li>
+            <li>Process optimization</li>
+            <li>Business process documentation</li>
+            <li>Stakeholder communication</li>
+            <li>Requirement gathering</li>
+            <li>Reporting and process improvement</li>
+            <li>Data interpretation and insight delivery</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-grid">
+        <article class="glass-card experience-mini-card reveal">
+          <div class="experience-mini-header">
+            <h3>ISRO – Satish Dhawan Space Centre</h3>
+            <span>Internship</span>
+          </div>
+          <p>Worked on simulation-based structural analysis for aerospace components and gained practical exposure to finite element analysis and engineering validation.</p>
+          <a href="INTERN_CERT_2023073_2-1.png" class="mini-link" target="_blank" rel="noreferrer">View Certificate</a>
+        </article>
+
+        <article class="glass-card experience-mini-card reveal">
+          <div class="experience-mini-header">
+            <h3>Alorb Technologies</h3>
+            <span>Internship</span>
+          </div>
+          <p>Developed a multi-store inventory management system using HTML, CSS, JavaScript, PHP, and MySQL to improve vendor coordination and inventory accuracy.</p>
+          <a href="Alorb.jpg" class="mini-link" target="_blank" rel="noreferrer">View Certificate</a>
+        </article>
+
+        <article class="glass-card experience-mini-card reveal">
+          <div class="experience-mini-header">
+            <h3>HAB Biomass Private Limited</h3>
+            <span>Internship</span>
+          </div>
+          <p>Supported research and documentation related to biochar-based carbon removal, data analysis, and technical reporting for sustainability-focused initiatives.</p>
+          <a href="Internship Letter to Sakshi NIT.pdf" class="mini-link" target="_blank" rel="noreferrer">View Certificate</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <p class="eyebrow">Tech Stack</p>
+        <h2>Tools, Languages, and Frameworks</h2>
+      </div>
+      <div class="stack-grid">
+        <div class="glass-card stack-card">
+          <h3>Programming</h3>
+          <div class="tag-list"><span>Python</span><span>SQL</span><span>Java</span></div>
+        </div>
+        <div class="glass-card stack-card">
+          <h3>Libraries</h3>
+          <div class="tag-list"><span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span><span>Scikit-learn</span><span>TensorFlow</span></div>
+        </div>
+        <div class="glass-card stack-card">
+          <h3>Tools</h3>
+          <div class="tag-list"><span>Power BI</span><span>Tableau</span><span>Excel</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Jupyter Notebook</span></div>
+        </div>
+        <div class="glass-card stack-card">
+          <h3>Databases & Cloud</h3>
+          <div class="tag-list"><span>MySQL</span><span>MongoDB</span><span>Azure</span><span>AWS (Learning)</span></div>
+        </div>
+      </div>
+
+      <div class="skill-visuals">
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 90; --accent: #2563eb;">
+            <span>90%</span>
+          </div>
+          <h4>Python</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 85; --accent: #06b6d4;">
+            <span>85%</span>
+          </div>
+          <h4>SQL</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 80; --accent: #3b82f6;">
+            <span>80%</span>
+          </div>
+          <h4>Power BI</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 78; --accent: #38bdf8;">
+            <span>78%</span>
+          </div>
+          <h4>Excel</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 75; --accent: #06b6d4;">
+            <span>75%</span>
+          </div>
+          <h4>Machine Learning</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 88; --accent: #2563eb;">
+            <span>88%</span>
+          </div>
+          <h4>Statistics</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 82; --accent: #3b82f6;">
+            <span>82%</span>
+          </div>
+          <h4>Data Cleaning</h4>
+        </div>
+        <div class="glass-card skill-card">
+          <div class="skill-ring" style="--value: 84; --accent: #06b6d4;">
+            <span>84%</span>
+          </div>
+          <h4>Dashboarding</h4>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <p class="eyebrow">Projects</p>
+        <h2>Selected Work that Bridges Analytics and Business Impact</h2>
+      </div>
+      <div class="project-grid">
+        <article class="glass-card project-card">
+          <div class="project-visual visual-1"></div>
+          <div class="project-body">
+            <h3>Sales Dashboard using Power BI</h3>
+            <p>Built an executive dashboard to surface sales trends, performance by region, and growth insights.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Power BI, Excel, DAX</div>
+            <div class="project-meta"><strong>Business Problem:</strong> Decision makers needed fast visibility into regional sales performance.</div>
+            <div class="project-meta"><strong>Solution:</strong> Created an interactive dashboard with KPIs, trends, and segmentation.</div>
+            <div class="project-meta"><strong>Results:</strong> Improved reporting clarity and faster decision-making.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+        <article class="glass-card project-card">
+          <div class="project-visual visual-2"></div>
+          <div class="project-body">
+            <h3>Customer Churn Prediction</h3>
+            <p>Developed a machine learning model to identify customers at risk of churn and support retention planning.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Python, Scikit-learn, Pandas</div>
+            <div class="project-meta"><strong>Business Problem:</strong> Retention teams needed early warning signals.</div>
+            <div class="project-meta"><strong>Solution:</strong> Built and evaluated a predictive classification model with feature analysis.</div>
+            <div class="project-meta"><strong>Results:</strong> Improved identification of likely churners.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+        <article class="glass-card project-card">
+          <div class="project-visual visual-3"></div>
+          <div class="project-body">
+            <h3>Movie Recommendation System</h3>
+            <p>Implemented a personalized recommendation engine using similarity-based and content-based methods.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Python, NLP, Scikit-learn</div>
+            <div class="project-meta"><strong>Business Problem:</strong> Improve user engagement through tailored suggestions.</div>
+            <div class="project-meta"><strong>Solution:</strong> Designed a recommendation engine with collaborative filtering approaches.</div>
+            <div class="project-meta"><strong>Results:</strong> Delivered a strong foundation for personalized content discovery.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+        <article class="glass-card project-card">
+          <div class="project-visual visual-4"></div>
+          <div class="project-body">
+            <h3>HR Analytics Dashboard</h3>
+            <p>Designed a dashboard that highlights hiring trends, attrition, employee engagement, and workforce insights.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Power BI, SQL, Excel</div>
+            <div class="project-meta"><strong>Business Problem:</strong> HR leaders needed an intuitive view of talent patterns.</div>
+            <div class="project-meta"><strong>Solution:</strong> Built a polished dashboard with drill-down views and interactive filters.</div>
+            <div class="project-meta"><strong>Results:</strong> Offered a clearer lens for workforce planning.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+        <article class="glass-card project-card">
+          <div class="project-visual visual-5"></div>
+          <div class="project-body">
+            <h3>Stock Price Prediction</h3>
+            <p>Explored forecasting strategies to model stock trends and support market analysis.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Python, Time Series, TensorFlow</div>
+            <div class="project-meta"><strong>Business Problem:</strong> Financial analysis required trend forecasting.</div>
+            <div class="project-meta"><strong>Solution:</strong> Experimented with time-series models and performance evaluation.</div>
+            <div class="project-meta"><strong>Results:</strong> Delivered a practical framework for predictive analysis.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+        <article class="glass-card project-card">
+          <div class="project-visual visual-6"></div>
+          <div class="project-body">
+            <h3>Healthcare Data Analysis</h3>
+            <p>Analyzed healthcare data to uncover patterns in patient outcomes and operational trends.</p>
+            <div class="project-meta"><strong>Tech Stack:</strong> Python, SQL, Tableau</div>
+            <div class="project-meta"><strong>Business Problem:</strong> Stakeholders needed contextual insights from healthcare records.</div>
+            <div class="project-meta"><strong>Solution:</strong> Applied data cleaning, exploratory analysis, and interactive dashboards.</div>
+            <div class="project-meta"><strong>Results:</strong> Strengthened insight delivery for healthcare decision-making.</div>
+            <div class="project-links"><a href="#" target="_blank">GitHub</a><a href="#" target="_blank">Live Demo</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="dashboard">
+      <div class="section-heading">
+        <p class="eyebrow">Interactive Dashboard</p>
+        <h2>Data Storytelling in Motion</h2>
+      </div>
+      <div class="dashboard-panel glass-card">
+        <div class="dashboard-toolbar">
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-range="Q1">Q1</button>
+            <button class="filter-btn" data-range="Q2">Q2</button>
+            <button class="filter-btn" data-range="Q3">Q3</button>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi-card">
+              <p>Revenue</p>
+              <h3 id="revenueValue">$2.4M</h3>
+            </div>
+            <div class="kpi-card">
+              <p>Customers</p>
+              <h3 id="customerValue">18.2K</h3>
+            </div>
+            <div class="kpi-card">
+              <p>Retention</p>
+              <h3 id="retentionValue">92%</h3>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-grid">
+          <div class="chart-card-large glass-card chart-panel">
+            <div class="card-head">
+              <p>Sales Performance</p>
+              <span id="chartLabel">Q1</span>
+            </div>
+            <svg viewBox="0 0 320 180" class="svg-chart interactive-line" aria-label="Interactive line chart">
+              <path class="grid-line" d="M20 150 H300" />
+              <path class="grid-line" d="M20 115 H300" />
+              <path class="grid-line" d="M20 80 H300" />
+              <path class="grid-line" d="M20 45 H300" />
+              <path class="line alt" id="linePath" d="M20 120 C60 115, 90 95, 120 100 S190 125, 220 90 S280 60, 300 45" />
+            </svg>
+          </div>
+          <div class="glass-card chart-panel">
+            <div class="card-head">
+              <p>Segment Mix</p>
+              <span>By Customer</span>
+            </div>
+            <div class="pie-wrap large">
+              <div class="pie-chart large"></div>
+            </div>
+          </div>
+          <div class="glass-card chart-panel">
+            <div class="card-head">
+              <p>Geo Reach</p>
+              <span>Global</span>
+            </div>
+            <div class="geo-map">
+              <div class="map-dot dot-1"></div>
+              <div class="map-dot dot-2"></div>
+              <div class="map-dot dot-3"></div>
+              <div class="map-dot dot-4"></div>
+            </div>
+          </div>
+          <div class="glass-card chart-panel">
+            <div class="card-head">
+              <p>Heatmap</p>
+              <span>Weekly Activity</span>
+            </div>
+            <div class="heatmap">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span class="active"></span><span></span><span></span>
+              <span></span><span></span><span class="active"></span><span></span>
+              <span></span><span></span><span></span><span class="active"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="section-heading">
+        <p class="eyebrow">Certifications</p>
+        <h2>Continuous Learning and Growth</h2>
+      </div>
+      <div class="card-grid">
+        <div class="glass-card cert-card"><h3>Python</h3><p>Programming foundations and data analysis workflows.</p></div>
+        <div class="glass-card cert-card"><h3>SQL</h3><p>Database querying, analysis, and reporting fundamentals.</p></div>
+        <div class="glass-card cert-card"><h3>Power BI</h3><p>Dashboard creation, data modeling, and business intelligence.</p></div>
+        <div class="glass-card cert-card"><h3>Machine Learning</h3><p>Supervised learning, predictive modeling, and evaluation.</p></div>
+        <div class="glass-card cert-card"><h3>Data Science</h3><p>End-to-end analytics, experimentation, and insight generation.</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="section-heading">
+        <p class="eyebrow">Blog</p>
+        <h2>Notes on Analytics, Data Science, and Business Intelligence</h2>
+      </div>
+      <div class="card-grid blog-grid">
+        <article class="glass-card blog-card">
+          <h3>SQL Tips</h3>
+          <p>Practical ways to write cleaner and faster SQL for business reporting.</p>
+        </article>
+        <article class="glass-card blog-card">
+          <h3>Python Tips</h3>
+          <p>Helpful techniques for data analysis, automation, and reproducible workflows.</p>
+        </article>
+        <article class="glass-card blog-card">
+          <h3>Power BI</h3>
+          <p>Design tips for creating dashboards that communicate clearly and quickly.</p>
+        </article>
+        <article class="glass-card blog-card">
+          <h3>Machine Learning</h3>
+          <p>How to build and evaluate models that solve practical business problems.</p>
+        </article>
+        <article class="glass-card blog-card">
+          <h3>Data Cleaning</h3>
+          <p>Best practices for preparing messy data for meaningful analysis.</p>
+        </article>
+        <article class="glass-card blog-card">
+          <h3>Data Visualization</h3>
+          <p>Crafting visuals that make insights intuitive for stakeholders.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build intelligent solutions with data</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="glass-card contact-card">
+          <h3>Get in touch</h3>
+          <ul>
+            <li><i class="uil uil-envelope"></i><span>sakshivermavns@gmail.com</span></li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/sakshi-verma-27589a248/" target="_blank" rel="noreferrer">
+                <i class="uil uil-linkedin-alt"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://github.com/Sakshi-V08" target="_blank" rel="noreferrer">
+                <i class="uil uil-github-alt"></i>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://drive.google.com/file/d/1X5X5X5X5X5X5X5X5X5X5X5X5X5X5X/view?usp=sharing" target="_blank" rel="noreferrer">
+                <i class="uil uil-file-download-alt"></i>
+                <span>Resume</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="glass-card contact-form">
+          <input type="text" placeholder="Your Name" />
+          <input type="email" placeholder="Your Email" />
+          <textarea placeholder="Tell me about your project or idea"></textarea>
+          <button class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <h3>Turning Data into Insights.</h3>
+      <p>Current Role: Analyst at Deloitte</p>
+      <p>Future Goal: Data Scientist</p>
     </div>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="visitor-card">
+      <p class="visitor-label">Visitors</p>
+      <h3 id="visitorCount">0</h3>
+    </div>
+  </footer>
 
-
-
-
-    <!-- ----- TYPING JS Link ----- -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- ----- SCROLL REVEAL JS Link----- -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-
-    <!-- ----- MAIN JS ----- -->
-    <script src="./script.js"></script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby2uz9OdvLyw531nO2dnEoKvEYSXDyzo70epEVjssGzfIoZoDhOarRI4BKciFVwaOQ/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
-        form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Message sent successfully"
-                    setTimeout(function () {
-                        msg.innerHTML = ""
-                    }, 5000)
-                    form.reset()
-                })
-
-
-                .catch(error => console.error('Error!', error.message))
-        })
-    </script>
+  <script src="./script.js"></script>
 </body>
-
 </html>
